@@ -29,9 +29,6 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-.red-text {
-  color: red; }
-
 section#tweets article {
   border: 1px solid #d9d9d9;
   border-radius: 10px;
@@ -43,38 +40,91 @@ section#tweets article {
     color: #244751; }
   section#tweets article:first-child {
     margin-top: 3em; }
-
-section#tweets header {
-  background-color: #f3f3f3;
-  height: 100px;
-  line-height: 3.5;
-  position: relative;
-  color: #667e84; }
-  section#tweets header img, section#tweets header h3 {
-    float: left;
-    display: inline; }
-section#tweets main {
-  font-size: 120%;
-  padding: 10px 10px;
-  min-height: 60px; }
-section#tweets footer {
-  position: relative;
-  bottom: 0;
-  border-top: 1px solid #d9d9d9;
-  padding: 8px; }
-section#tweets .tweet-interact-icons {
-  display: none;
-  float: right; }
-
-article header div.username {
-  position: absolute;
-  top: 1em;
-  right: 1em; }
+  section#tweets article header {
+    background-color: #f3f3f3;
+    height: 100px;
+    line-height: 3.5;
+    position: relative;
+    color: #667e84; }
+    section#tweets article header img, section#tweets article header h3 {
+      float: left;
+      display: inline; }
+    section#tweets article header div.username {
+      position: absolute;
+      top: 1em;
+      right: 1em; }
+  section#tweets article main {
+    font-size: 120%;
+    padding: 10px 10px;
+    min-height: 60px; }
+  section#tweets article footer {
+    position: relative;
+    bottom: 0;
+    border-top: 1px solid #d9d9d9;
+    padding: 8px; }
+  section#tweets article .tweet-interact-icons {
+    display: none;
+    float: right; }
 
 img.tweet-thumbnail {
   width: 80px;
   height: 80px;
   border-radius: 10px;
   margin: .6em; }
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #00a087;
+  font-color: #e8fdff;
+  padding-left: 2em;
+  padding-right: 2em; }
+  #nav-bar img.logo {
+    height: 80px;
+    width: 80px; }
+  #nav-bar * {
+    float: left; }
+  #nav-bar .header {
+    margin-left: 10px;
+    line-height: 2.5;
+    font-size: 200%; }
+  #nav-bar div.btn-compose {
+    margin: 1.7em; }
+  #nav-bar div.btn-compose i {
+    margin-top: 0.25em; }
+
+section.new-tweet {
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 10px 10px 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  position: relative;
+  top: 30px;
+  display: none; }
+  section.new-tweet h2 {
+    border-bottom: 1px solid black;
+    margin-top: 10px; }
+  section.new-tweet form {
+    margin-bottom: 10px; }
+    section.new-tweet form textarea {
+      width: 100%;
+      margin: auto;
+      height: 3em;
+      margin-bottom: 5px;
+      padding: 5px; }
+
+textarea#newTweet {
+  height: 80px; }
+
+span.counter {
+  float: right;
+  position: relative;
+  right: 8px; }
 
 /*# sourceMappingURL=layout.css.map */

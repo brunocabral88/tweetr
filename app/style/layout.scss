@@ -13,11 +13,13 @@ html {
 /*
  * Global layout stuff
  */
+$bgColor: #eee;
+$defaultFontColor: #244751;
 
 body {
   margin: 0;
-  color: #244751;
-  background-color: #eee;
+  color: $defaultFontColor;
+  background-color: $bgColor;
   font-family: 'Roboto Condensed', sans-serif;
   .container {
 	 	width: 550px;
@@ -34,58 +36,52 @@ body {
  */
 $twBorderColor: #d9d9d9;
 
- .red-text {
- 	color: red;
- }
-
- section#tweets article {
- 	border: 1px solid $twBorderColor;
- 	border-radius: 10px;
- 	margin-left: 2em;
- 	margin-right: 2em;
- 	margin-bottom: 1em;
- 	overflow: hidden;
- 	&:hover {
-		color: #244751
-	}	
-	&:first-child {
-		margin-top:3em;
-	}	
- }
-
 section#tweets {
-	header {
-		background-color: #f3f3f3;
-		height: 100px;
-		line-height: 3.5;
-		position: relative;
-		color: #667e84;
-		img,h3 {
-			float: left;
-			display: inline;	
+	article {
+	 	border: 1px solid $twBorderColor;
+	 	border-radius: 10px;
+	 	margin-left: 2em;
+	 	margin-right: 2em;
+	 	margin-bottom: 1em;
+	 	overflow: hidden;
+	 	&:hover {
+			color: #244751
+		}	
+		&:first-child {
+			margin-top:3em;
+		}	
+		header {
+			background-color: #f3f3f3;
+			height: 100px;
+			line-height: 3.5;
+			position: relative;
+			color: #667e84;
+			img,h3 {
+				float: left;
+				display: inline;	
+			}
+			div.username {
+				position: absolute;
+				top: 1em;
+				right: 1em;
+			}
 		}
-	}
-	main {
-		font-size: 120%;
-		padding: 10px 10px;
-		min-height: 60px;
-	}
-	footer {
-		position: relative;
-		bottom: 0;
-		border-top: 1px solid $twBorderColor;
-		padding:8px;
-	}
-	.tweet-interact-icons {
-		display: none;
-		float:right;
-	}
-}
-
-article header div.username {
-	position: absolute;
-	top: 1em;
-	right: 1em;
+		main {
+			font-size: 120%;
+			padding: 10px 10px;
+			min-height: 60px;
+		}
+		footer {
+			position: relative;
+			bottom: 0;
+			border-top: 1px solid $twBorderColor;
+			padding:8px;
+		}
+		.tweet-interact-icons {
+			display: none;
+			float:right;
+		}
+	 }
 }
 
 img.tweet-thumbnail {
@@ -94,3 +90,6 @@ img.tweet-thumbnail {
 	border-radius: 10px;
 	margin: .6em;
 }
+
+@import 'nav';
+@import 'new-tweet';
