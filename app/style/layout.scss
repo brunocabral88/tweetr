@@ -1,0 +1,94 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: 'Roboto Condensed', sans-serif;
+  .container {
+	 	width: 550px;
+	 	/*height: 800px;*/
+	 	margin:auto;
+	 	position: relative;
+	 	top: 100px;
+	 	background-color: white;
+	 	overflow: hidden;
+	}
+}
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+$twBorderColor: #d9d9d9;
+
+ .red-text {
+ 	color: red;
+ }
+
+ section#tweets article {
+ 	border: 1px solid $twBorderColor;
+ 	border-radius: 10px;
+ 	margin-left: 2em;
+ 	margin-right: 2em;
+ 	margin-bottom: 1em;
+ 	overflow: hidden;
+ 	&:hover {
+		color: #244751
+	}	
+	&:first-child {
+		margin-top:3em;
+	}	
+ }
+
+section#tweets {
+	header {
+		background-color: #f3f3f3;
+		height: 100px;
+		line-height: 3.5;
+		position: relative;
+		color: #667e84;
+		img,h3 {
+			float: left;
+			display: inline;	
+		}
+	}
+	p {
+		padding: 5px 10px;
+	}
+	footer {
+		position: relative;
+		bottom: 0;
+		border-top: 1px solid $twBorderColor;
+		padding:8px;
+	}
+	.tweet-interact-icons {
+		display: none;
+		float:right;
+	}
+}
+
+article header div.username {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+
+img.tweet-thumbnail {
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	margin: .6em;
+}

@@ -4,97 +4,75 @@
  * Do not modify these two selectors, please
  */
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 *, *:before, *:after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 /*
  * Global layout stuff
  */
-
 body {
   margin: 0;
   color: #244751;
   background-color: #eee;
-  font-family: 'Roboto Condensed', sans-serif;
-}
+  font-family: 'Roboto Condensed', sans-serif; }
+  body .container {
+    width: 550px;
+    /*height: 800px;*/
+    margin: auto;
+    position: relative;
+    top: 100px;
+    background-color: white;
+    overflow: hidden; }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+.red-text {
+  color: red; }
 
- body .container {
- 	width: 550px;
- 	/*height: 800px;*/
- 	margin:auto;
- 	position: relative;
- 	top: 100px;
- 	background-color: white;
- 	overflow: hidden;
- }
-
- .red-text {
- 	color: red;
- }
-
- section#tweets article {
- 	border: 1px solid #d9d9d9;
- 	border-radius: 10px;
- 	margin-left: 2em;
- 	margin-right: 2em;
- 	margin-bottom: 1em;
- 	overflow: hidden;
- }
-
-section#tweets article:hover {
-	color: #244751
-}
-
-section#tweets article:first-child {
-	margin-top:3em;
-}
+section#tweets article {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  overflow: hidden; }
+  section#tweets article:hover {
+    color: #244751; }
+  section#tweets article:first-child {
+    margin-top: 3em; }
 
 section#tweets header {
-	background-color: #f3f3f3;
-	height: 100px;
-	line-height: 3.5;
-	position: relative;
-	color: #667e84;
-}
-
-section#tweets header > img, section#tweets header > h3 {
-	float: left;
-	display: inline;
-}
-
+  background-color: #f3f3f3;
+  height: 100px;
+  line-height: 3.5;
+  position: relative;
+  color: #667e84; }
+  section#tweets header img, section#tweets header h3 {
+    float: left;
+    display: inline; }
 section#tweets p {
-	padding: 5px 10px;
-}
-
-
+  padding: 5px 10px; }
 section#tweets footer {
-	position: relative;
-	bottom: 0;
-	border-top: 1px solid #d9d9d9;
-	padding:8px;
-}
+  position: relative;
+  bottom: 0;
+  border-top: 1px solid #d9d9d9;
+  padding: 8px; }
+section#tweets .tweet-interact-icons {
+  display: none;
+  float: right; }
 
-header div.username {
-	position: absolute;
-	top: 1em;
-	right: 1em;
-}
+article header div.username {
+  position: absolute;
+  top: 1em;
+  right: 1em; }
 
 img.tweet-thumbnail {
-	width: 80px;
-	height: 80px;
-	border-radius: 10px;
-	margin: .6em;
-}
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin: .6em; }
 
-footer .tweet-interact-icons {
-	display: none;
-	float:right;
-}
+/*# sourceMappingURL=layout.css.map */

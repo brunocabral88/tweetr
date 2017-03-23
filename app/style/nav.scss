@@ -1,0 +1,31 @@
+#nav-bar {
+	position: fixed;
+	top: 0;
+	height: 80px;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background-color: #00a087;
+	font-color: #e8fdff;
+	padding-left: 2em;
+	padding-right: 2em;
+	img.logo {
+		height: 80px;
+		width: 80px;
+	}
+	* {
+		float:left;
+	}
+
+	.header {
+		margin-left: 10px;
+		line-height: 2.5;
+		font-size: 200%;
+	}
+	div.btn-compose {
+		margin:1.7em;
+	}
+	div.btn-compose i {
+		margin-top: 0.25em;
+	}
+} 
