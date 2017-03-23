@@ -5,16 +5,22 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -23,10 +29,54 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" width="80px" height="80px">
       <span class="header">Tweeter</span>
+      <div class="pull-right btn btn-info btn-compose">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Compose
+      </div>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets" method="POST">
+          <textarea name="text" id="newTweet" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>  
+      </section>
+      <section id="tweets">
+        <article>
+          <header>
+            <img src="http://www.charlestonacademy.co.uk/wp-content/uploads/2013/02/twitter-bird-white-on-blue-e1365769304265.png" alt="Tweeter logo" class="tweet-thumbnail">
+            <h3>Test tweet header</h3>
+            <div class="username">@TestUser</div>
+          </header>
+          <p>Tweet body text Tweet body text Tweet body text Tweet body text Tweet body text Tweet body text Tweet body text Tweet body text Tweet body text Tweet body text Tweet body text Tweet body text </p>
+          <footer>
+            <span class"tweet-timestamp">10 days ago</span>
+            <div class="tweet-interact-icons">
+              <i class="fa fa-flag" aria-hidden="true"></i>
+              <i class="fa fa-retweet" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </div>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <img src="http://www.charlestonacademy.co.uk/wp-content/uploads/2013/02/twitter-bird-white-on-blue-e1365769304265.png" alt="Tweeter logo" class="tweet-thumbnail">
+            <h3>Another Tweet header</h3>
+          </header>
+          <p>Another Tweet Another Tweet Another Tweet Another Tweet Another Tweet Another Tweet Another Tweet Another Tweet </p>
+          <footer>
+            <span class"tweet-timestamp">14 days ago</span>
+            <div class="tweet-interact-icons">
+              <i class="fa fa-flag" aria-hidden="true"></i>
+              <i class="fa fa-retweet" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
     </main>
 
   </body>
