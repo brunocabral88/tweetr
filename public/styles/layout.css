@@ -53,8 +53,10 @@ section#tweets header {
   section#tweets header img, section#tweets header h3 {
     float: left;
     display: inline; }
-section#tweets p {
-  padding: 5px 10px; }
+section#tweets main {
+  font-size: 120%;
+  padding: 10px 10px;
+  min-height: 60px; }
 section#tweets footer {
   position: relative;
   bottom: 0;

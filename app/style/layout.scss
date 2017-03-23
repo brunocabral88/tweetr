@@ -65,8 +65,10 @@ section#tweets {
 			display: inline;	
 		}
 	}
-	p {
-		padding: 5px 10px;
+	main {
+		font-size: 120%;
+		padding: 10px 10px;
+		min-height: 60px;
 	}
 	footer {
 		position: relative;
